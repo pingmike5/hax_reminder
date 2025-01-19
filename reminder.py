@@ -57,11 +57,11 @@ def send_message_to_weixin():
     try:
         response = requests.post(url,data=body,headers=headers)
         response.raise_for_status()  # 检查请求是否成功
+        print(f"Error: 发送微信消息成功")
     except requests.exceptions.RequestException as e:
         print(f"Error: 发送微信消息失败: {e}")
-        return
+        
 
-    return response.json()
 
 if __name__ == "__main__":
     # 从环境变量获取自定义消息
