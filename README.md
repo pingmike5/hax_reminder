@@ -30,10 +30,19 @@
     - 添加以下 Secrets：
         - `CUSTOM_MESSAGE`: 自定义消息内容。例如：
          
-          ```我是消息提醒内容，别忘记了喝水～～～～
-          ```        
+          ```我是消息提醒内容，别忘记了喝水～～～～```  
+
         - `TELEGRAM_BOT_TOKEN`: 你的 Telegram Bot 的 API Token。
         - `TELEGRAM_CHAT_ID`: 你的 Telegram Chat ID。
+
+        - `PUSHPLUS_TOKEN`: 你的 pushplus 的推送token。
+          比如：
+           ```您该去做 hax 的续期了！```  
+           
+        - `WX_MESSAGE_TITLE`: 要推动给你微信的标题。
+        - `TELEGRAM_CHAT_ID`: 要推动给你微信的内容。
+           比如：
+           ```您该去做 hax 的续期了！ \张三\n 李四``` 
 
     - **获取方法**：
         - 在 Telegram 中创建 Bot，并获取 API Token 和 Chat ID。
@@ -61,8 +70,21 @@
 
 - **CUSTOM_MESSAGE**
     - 示例值:
-      ```我是消息提醒内容，别忘记了喝水～～～～
-      ```
+      ```我是消息提醒内容，别忘记了喝水～～～～```
+
+- **PUSHPLUS_TOKEN** 你的 pushplus 的推送token。
+ - 示例值: `87949e34983d123456789dd40d7fc8`
+    - 获取方法: pushplus里面的 token
+
+- **WX_MESSAGE_TITLE** 
+    - 示例值:
+      ```您该去做 hax 的续期了！```
+
+- **TELEGRAM_CHAT_ID** 
+    - 示例值:
+      ```您该去做 hax 的续期了！```
+
+
 ### 注意事项
 
 - **保密性**: Secrets 是敏感信息，请确保不要将它们泄露到公共代码库或未授权的人员。
