@@ -44,8 +44,13 @@ def send_message_to_weixin():
          print("Error: vx消息推送的标题和内容未设置,停止微信消息发送！")
          return
 
-    print("start to send message to wechat！")
-    send_pushplus_message(pushplus_token,title,content)
+    # 检查 token、title 和 content
+    if pushplus_token and title and content:
+        print("start to send message to wechat！")
+        result = send_pushplus_message(pushplus_token, title, content)
+        print(result)  # 打印返回结果
+    else:
+        print("推送微信失败：请确保 pushplus_token、title 和 content 都不为空。")
          
 
 def send_pushplus_message(token, title, content):
