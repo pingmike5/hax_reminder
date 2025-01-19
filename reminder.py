@@ -35,11 +35,11 @@ def send_message_to_weixin():
     title = os.getenv('WX_MESSAGE_TITLE')
     content = os.getenv('WX_MESSAGE_CONTENT')
 
-    if not pushplus_token:
+    if  pushplus_token:
         print("Error: vx消息推送的 pushplus token未设置,停止微信消息发送")
         return
 
-    if pushplus_token:
+    if not pushplus_token:
       if not telegram_bot_token or not telegram_chat_id:
          print("Error: vx消息推送的标题和内容未设置,停止微信消息发送！")
          return
