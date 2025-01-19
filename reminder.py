@@ -35,6 +35,10 @@ def send_message_to_weixin():
     title = os.getenv('WX_MESSAGE_TITLE')
     content = os.getenv('WX_MESSAGE_CONTENT')
 
+    print(f"pushplus_token:\n {pushplus_token}\n");
+    print(f"title:\n {title}\n");
+    print(f"content:\n {content}\n");
+
     if  pushplus_token:
         print("Error: vx消息推送的 pushplus token未设置,停止微信消息发送")
         return
