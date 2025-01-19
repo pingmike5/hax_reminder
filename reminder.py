@@ -40,7 +40,7 @@ def send_message_to_weixin():
         return
 
     if not pushplus_token:
-      if not telegram_bot_token or not telegram_chat_id:
+      if not title or not content:
          print("Error: vx消息推送的标题和内容未设置,停止微信消息发送！")
          return
 
