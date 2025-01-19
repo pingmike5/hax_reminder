@@ -44,24 +44,26 @@ def send_message_to_weixin():
          print("Error: vx消息推送的标题和内容未设置,停止微信消息发送！")
          return
 
+    print("start to send message to wechat！")
+    send_pushplus_message(pushplus_token,title,content)
+         
 
-    url = 'http://www.pushplus.plus/send'
-    data = {
-        "token":pushplus_token,
-        "title":title,
-        "content":content
+def send_pushplus_message(token, title, content):
+    url = "http://www.pushplus.plus/send"
+    headers = {
+        "Content-Type": "application/json"
     }
-    body=json.dumps(data).encode(encoding='utf-8')
-    headers = {'Content-Type':'application/json'}
+    data = {
+        "token": token,
+        "title": title,
+        "content": content,
+        "template": "html"  # 可选，选择消息模板
+    }
 
-    try:
-        response = requests.post(url,data=body,headers=headers)
-        response.raise_for_status()  # 检查请求是否成功
-        print(f"Error: 发送微信消息成功")
-    except requests.exceptions.RequestException as e:
-        print(f"Error: 发送微信消息失败: {e}")
-        
-
+    response = requests.post(url, json=data, headers=headers)
+    result = response.json()
+    print(result)
+    return result
 
 if __name__ == "__main__":
     # 从环境变量获取自定义消息
@@ -75,6 +77,6 @@ if __name__ == "__main__":
     final_message = f"自动化提醒脚本运行开始:\n-----------------------------------\n\n {custom_message}"
     
     response = send_message_to_telegram(final_message)
-    send_message_to_weixin()
+    result = send_message_to_weixin()
     
     print("脚本执行结束~~~~")
