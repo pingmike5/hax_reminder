@@ -30,8 +30,7 @@
     - 添加以下 Secrets：
         - `CUSTOM_MESSAGE`: 自定义消息内容。例如：
          
-          ```我是消息提醒内容，别忘记了喝水～～～～
-          ```        
+          ```我是消息提醒内容，别忘记了喝水～～～～ ```        
         - `TELEGRAM_BOT_TOKEN`: 你的 Telegram Bot 的 API Token。
         - `TELEGRAM_CHAT_ID`: 你的 Telegram Chat ID。
 
@@ -61,8 +60,7 @@
 
 - **CUSTOM_MESSAGE**
     - 示例值:
-      ```我是消息提醒内容，别忘记了喝水～～～～
-      ```
+      ```我是消息提醒内容，别忘记了喝水～～～～ ```
 ### 注意事项
 
 - **保密性**: Secrets 是敏感信息，请确保不要将它们泄露到公共代码库或未授权的人员。
