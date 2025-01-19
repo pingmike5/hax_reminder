@@ -28,5 +28,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CUSTOM_MESSAGE: ${{ secrets.CUSTOM_MESSAGE }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          WX_MESSAGE_TITLE: ${{ secrets.WX_MESSAGE_TITLE }}
+          WX_MESSAGE_CONTENT: ${{ secrets.WX_MESSAGE_CONTENT }}
         run: |
           python reminder.py
