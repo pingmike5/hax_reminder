@@ -40,9 +40,9 @@
            ```您该去做 hax 的续期了！```  
            
         - `WX_MESSAGE_TITLE`: 要推动给你微信的标题。
-        - `TELEGRAM_CHAT_ID`: 要推动给你微信的内容。
+        - `WX_MESSAGE_CONTENT`: 要推动给你微信的内容。
            比如：
-           ```您该去做 hax 的续期了！ \张三\n 李四``` 
+           ```您该去做 hax 的续期了！ ``` 
 
     - **获取方法**：
         - 在 Telegram 中创建 Bot，并获取 API Token 和 Chat ID。
@@ -80,7 +80,7 @@
     - 示例值:
       ```您该去做 hax 的续期了！```
 
-- **TELEGRAM_CHAT_ID** 
+- **WX_MESSAGE_CONTENT** 
     - 示例值:
       ```您该去做 hax 的续期了！```
 
