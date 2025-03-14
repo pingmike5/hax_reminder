@@ -3,7 +3,7 @@ name: Send Message to Telegram and wechat
 on:
   workflow_dispatch:  # 允许手动触发 
   schedule:
-    - cron: '17 8 */3 * *'  # 每隔 3 天的早上 8 点 17 分执行
+    - cron: '17 8 */2 * *'  # 每隔 2 天的早上 8 点 17 分执行,北京时间 16:17
   push:
     branches:
       - main  # 或其他你希望触发的分支（加上这个玩意就会邮件提醒你脚本执行了）
